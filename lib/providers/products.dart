@@ -46,8 +46,14 @@ class Products with ChangeNotifier {
     return [..._items];
   }
 
-  void showFavoriteOnly() {
-    
+  void showFavoritesOnly() {
+    _showFavoritesOnly = true;
+    notifyListeners();
+  }
+
+  void showAll() {
+    _showFavoritesOnly = false;
+    notifyListeners();
   }
 
   Product findById(String id) {
