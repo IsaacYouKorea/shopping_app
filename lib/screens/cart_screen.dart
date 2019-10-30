@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../providers/cart.dart' show Cart;
 import '../widgets/cart_item.dart';
 import '../providers/orders.dart';
+import '../widgets/app_drawer.dart';
 
 class CartScreen extends StatelessWidget {
   static const routeName = '/cart';
@@ -14,6 +15,7 @@ class CartScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Your Cart'),
       ),
+      drawer: AppDrawer(),
       body: Column(
         children: <Widget>[
           Card(
